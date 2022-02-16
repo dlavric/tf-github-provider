@@ -27,18 +27,8 @@ This is the output of initializing the Terraform code:
 Initializing the backend...
 
 Initializing provider plugins...
-- Finding integrations/github versions matching "4.20.0"...
-- Installing integrations/github v4.20.0...
-- Installed integrations/github v4.20.0 (signed by a HashiCorp partner, key ID 38027F80D7FD5FB2)
-
-Partner and community providers are signed by their developers.
-If you'd like to know more about provider signing, you can read about it here:
-https://www.terraform.io/docs/cli/plugins/signing.html
-
-Terraform has created a lock file .terraform.lock.hcl to record the provider
-selections it made above. Include this file in your version control repository
-so that Terraform can guarantee to make the same selections by default when
-you run "terraform init" in the future.
+- Reusing previous version of integrations/github from the dependency lock file
+- Using previously-installed integrations/github v4.20.0
 
 Terraform has been successfully initialized!
 
@@ -58,12 +48,60 @@ terraform apply
 
 This is the output for applying the changes:
 ```shell
+var.repo_description
+  Enter a value: <YOUR_DESCRIPTION>
 
-No changes. Your infrastructure matches the configuration.
+var.repository
+  Enter a value: <YOUR_REPO>
 
-Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
+var.token
+  Enter a value: <YOUR_TOKEN>
 
-Apply complete! Resources: 0 added, 0 changed, 0 destroyed.```
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # github_repository.example will be created
+  + resource "github_repository" "example" {
+      + allow_auto_merge       = false
+      + allow_merge_commit     = true
+      + allow_rebase_merge     = true
+      + allow_squash_merge     = true
+      + archived               = false
+      + branches               = (known after apply)
+      + default_branch         = (known after apply)
+      + delete_branch_on_merge = false
+      + description            = "repository for learning TF Github provider"
+      + etag                   = (known after apply)
+      + full_name              = (known after apply)
+      + git_clone_url          = (known after apply)
+      + html_url               = (known after apply)
+      + http_clone_url         = (known after apply)
+      + id                     = (known after apply)
+      + name                   = "github_repository"
+      + node_id                = (known after apply)
+      + private                = (known after apply)
+      + repo_id                = (known after apply)
+      + ssh_clone_url          = (known after apply)
+      + svn_url                = (known after apply)
+      + visibility             = "public"
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+github_repository.example: Creating...
+github_repository.example: Creation complete after 7s [id=github_repository]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+```
 
 ## Reference Documentation
 - [Github provider](https://registry.terraform.io/providers/integrations/github/latest/docs)
