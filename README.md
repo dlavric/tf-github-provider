@@ -50,13 +50,13 @@ This is the output for applying the changes:
 ```shell
 
 var.repo_description
-  Enter a value: repository for learning TF Github provider
+  Enter a value: <YOUR_DESCRIPTION>
 
 var.repository
-  Enter a value: github_repository
+  Enter a value: <YOUR_REPOSITORY>
 
 var.token
-  Enter a value: 6e6a0ea5d63029306fb64556eae4b0d7d844492d
+  Enter a value: <YOUR_TOKEN>
 
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
