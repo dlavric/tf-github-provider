@@ -17,10 +17,19 @@ git clone git@github.com:dlavric/tf-github-provider.git
 cd tf-github-provider
 ```
 
+- Create a Github token:
+1. Go to your account and select `Settings`
+Picture1
+
+2. Go to `Developer Settings` and click on `Personal access token` and then `Generate new token` 
+Picture2
+
+
 - Run `terraform init`, to download any external dependency
 ```shell
 terraform init
 ```
+
 
 This is the output of initializing the Terraform code:
 ```shell
