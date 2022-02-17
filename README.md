@@ -19,10 +19,10 @@ cd tf-github-provider
 
 - Create a Github token:
 1. Go to your account and select `Settings`
-Picture1
+![Picture1](https://github.com/dlavric/tf-github-provider/blob/main/Screenshot%202022-02-17%20at%2009.12.22.png)
 
 2. Go to `Developer Settings` and click on `Personal access token` and then `Generate new token` 
-Picture2
+![Picture2](https://github.com/dlavric/tf-github-provider/blob/main/Screenshot%202022-02-17%20at%2009.15.40.png)
 
 
 - Run `terraform init`, to download any external dependency
